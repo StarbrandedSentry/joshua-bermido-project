@@ -1,0 +1,27 @@
+p {
+  margin-bottom: 5rem;
+}
+
+.main {
+  background-image: url('src/assets/images/IMG-69385239315219edad6b517564d84915-V.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 10vh;
+}
+
+.logo {
+  font-size: 15vh;
+  color: #ffffff;
+}
+
+.buttons {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  height: 6vh;
+  width: 10vw;
+  font-size: 2vh;
+}

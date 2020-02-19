@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'logoFont';
+  src: url('assets/fonts/Yellowtail/Yellowtail-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'bodyFont';
+  src: url('assets/fonts/Sanchez/Sanchez-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'titleFont';
+  src: url('assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  box-sizing: inherit;
+  background-color: #fafafa;
+}
+
+.logo {
+  font-family: 'logoFont';
+  outline: none;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+  height: auto;
+  min-height: 100%;
+  width: 100vw;
+}
+
+.stroke {
+  -webkit-text-stroke: 0.2vh black;
+}
+
+button {
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.outlined {
+    background: none;
+    border: #ffffff 0.2vh solid;
+    color: #ffffff;
+    transition-property: color, background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
