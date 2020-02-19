@@ -10,10 +10,20 @@ import { CateringComponent } from './catering/catering.component';
 import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, OurStoryComponent, MenusComponent, OrderOnlineComponent, CateringComponent, EventsComponent, ContactComponent, LandingPageComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    OurStoryComponent,
+    MenusComponent,
+    OrderOnlineComponent,
+    CateringComponent,
+    EventsComponent,
+    ContactComponent,
+    LandingPageComponent
+  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
