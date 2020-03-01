@@ -21,6 +21,13 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: titleFont;
+}
+
 body {
   margin: 0;
   box-sizing: inherit;
@@ -92,6 +99,13 @@ button {
   font-family: titleFont;
   letter-spacing: 0.2vh;
   font-size: 4vh;
+}
+
+.subheader {
+  text-transform: uppercase;
+  font-family: titleFont;
+  margin: 1vh 0;
+  font-size: 2.5vh;
 }
 
 .row {

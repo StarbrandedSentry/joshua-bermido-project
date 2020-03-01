@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  carouselSrc = './assets/images/showcase-1.jpg';
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  changeCarouselImage(location: string) {
+    this.carouselSrc = location;
   }
-
 }
