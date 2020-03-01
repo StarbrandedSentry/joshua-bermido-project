@@ -1,12 +1,9 @@
 <nav>
   <div class="logo no-select" [routerLink]="['/welcome']">Masissneun</div>
   <div class="links">
-    <a [routerLink]="['/our-story']">Our Story</a>
+    <a [routerLink]="['/welcome']" [routerLinkActive]="['active-link']">Home</a>
     <a [routerLink]="['/menus']">Menus</a>
-    <a [routerLink]="['/order-online']">Order Online</a>
-    <a [routerLink]="['/catering']">Catering</a>
-    <a [routerLink]="['/events']">Events</a>
-    <a [routerLink]="['/contact']">Contact & Reservations</a>
+    <a [routerLink]="['/contact']">Contact</a>
   </div>
 </nav>
 <div class="body" [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">

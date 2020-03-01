@@ -12,16 +12,24 @@ nav {
   a {
     text-decoration: none;
     color: #000000;
-    margin-left: 1.25vw;
+    margin-left: 0.25vw;
     font-size: 2vh;
+    padding: 1vh 1vw;
+    border-radius: 6px;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
     &:hover {
       cursor: pointer;
+      background-color: var(--primary-clr);
+      color: #ffffff;
     }
   }
 }
 
 .logo {
   font-size: 4vh;
+  color: var(--primary-clr);
 }
 
 .links {
