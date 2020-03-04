@@ -40,22 +40,27 @@
     </div>
     <div class="carousel-buttons">
       <button
-        mat-button-raised
+        [class.carousel-selected]="carouselImage == 1"
         (click)="changeCarouselImage('./assets/images/showcase-1.jpg', 1)"
       ></button>
       <button
+        [class.carousel-selected]="carouselImage == 2"
         (click)="changeCarouselImage('./assets/images/showcase-2.jpg', 2)"
       ></button>
       <button
+        [class.carousel-selected]="carouselImage == 3"
         (click)="changeCarouselImage('./assets/images/showcase-3.jpg', 3)"
       ></button>
       <button
+        [class.carousel-selected]="carouselImage == 4"
         (click)="changeCarouselImage('./assets/images/showcase-4.jpg', 4)"
       ></button>
       <button
+        [class.carousel-selected]="carouselImage == 5"
         (click)="changeCarouselImage('./assets/images/showcase-5.jpg', 5)"
       ></button>
       <button
+        [class.carousel-selected]="carouselImage == 6"
         (click)="changeCarouselImage('./assets/images/showcase-6.jpg', 6)"
       ></button>
     </div>

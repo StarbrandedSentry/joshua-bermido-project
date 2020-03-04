@@ -6,7 +6,7 @@ import {
   style,
   animate
 } from '@angular/animations';
-import { timer, pipe } from 'rxjs';
+import { timer, pipe, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 @Component({
@@ -26,11 +26,17 @@ export class LandingPageComponent implements OnInit {
   fadeOut = false;
   carouselSrc = './assets/images/showcase-1.jpg';
   carouselImage = 1;
+  autoCarousel = timer(4000, 4000);
+  carouselSubscription: Subscription;
+
   constructor() {}
 
   ngOnInit() {
-    const autoCarousel = timer(1000, 4000);
-    autoCarousel.subscribe(res => {
+    this.startTimer();
+  }
+
+  startTimer() {
+    this.carouselSubscription = this.autoCarousel.subscribe(res => {
       this.carouselImage++;
       if (this.carouselImage === 7) {
         this.carouselImage = 1;
@@ -56,8 +62,11 @@ export class LandingPageComponent implements OnInit {
     if (this.carouselImage === image) {
       return;
     }
+    this.carouselSubscription.unsubscribe();
+    this.carouselSubscription = null;
     this.carouselImage = image;
     this.carouselChange(location, image);
+    this.startTimer();
   }
 
   carouselChange(location: string, image: number) {
