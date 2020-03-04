@@ -2,6 +2,7 @@ nav {
   font-family: 'Montserrat', sans-serif;
   position: fixed;
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 13vh;
   width: 100vw;
@@ -25,6 +26,11 @@ nav {
       color: #ffffff;
     }
   }
+
+  .row {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .logo {
@@ -33,8 +39,8 @@ nav {
 }
 
 .links {
-  margin-left: auto;
   display: flex;
+  padding: 0.25rem 0;
 }
 
 .body {

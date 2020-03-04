@@ -36,7 +36,12 @@ p {
 .buttons {
   width: 40vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  button {
+    margin-right: 0.25vw;
+    margin-left: 0.25vw;
+  }
 }
 
 button {
