@@ -15,10 +15,10 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./landing-page.component.scss'],
   animations: [
     trigger('opacityChange', [
-      state('fadeOut', style({ opacity: 0 })),
+      state('fadeOut', style({ opacity: 0.75 })),
       state('fadeIn', style({ opacity: 1 })),
-      transition('fadeIn => fadeOut', [animate('0.15s')]),
-      transition('fadeOut => fadeIn', [animate('0.15s')])
+      transition('fadeIn => fadeOut', [animate('0.35s')]),
+      transition('fadeOut => fadeIn', [animate('0.2s')])
     ])
   ]
 })
@@ -71,7 +71,7 @@ export class LandingPageComponent implements OnInit {
 
   carouselChange(location: string, image: number) {
     this.fadeOut = !this.fadeOut;
-    const source = timer(100, 150);
+    const source = timer(350, 350);
     source.pipe(take(1)).subscribe(res => {
       // console.log('0.5 SECONDS HAVE PASSED');
       this.fadeOut = !this.fadeOut;
