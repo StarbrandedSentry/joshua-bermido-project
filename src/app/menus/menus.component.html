@@ -67,5 +67,58 @@
       </div>
     </div>
   </div>
+
+  <!--TOSTATOS-->
+  <div class="menu">
+    <div class="menu-title">Tostatos</div>
+    <div class="menu-items">
+      <div class="menu-item">
+        <div class="item-title">Buttered Bread</div>
+        <div class="item-caption">
+          Bread with butter and sugar? Why not?
+        </div>
+        <div class="item-price">90.00</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-title">Garlic Bread</div>
+        <div class="item-caption">
+          Satisfy your cravings with out very own homemade garlic bread.
+        </div>
+        <div class="item-price">90.00</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="drinks">
+    <div class="title">Drinks</div>
+    <div class="drink-row">
+      <div class="title">GM Milk Tea</div>
+      <div class="price-title">
+        <span>Tall</span>
+        <span>Grande</span>
+      </div>
+    </div>
+    <div class="drink-row" *ngFor="let drink of gmMilkTea">
+      <div class="drink-name">{{ drink.name }}</div>
+      <div class="drink-price">
+        <span>{{ drink.tallPrice }}</span>
+        <span>{{ drink.grandePrice }}</span>
+      </div>
+    </div>
+    <div class="drink-row">
+      <div class="title">YG Fruit Tea</div>
+      <div class="price-title">
+        <span>Tall</span>
+        <span>Grande</span>
+      </div>
+    </div>
+    <div class="drink-row" *ngFor="let drink of ygFruitTea">
+      <div class="drink-name">{{ drink.name }}</div>
+      <div class="drink-price">
+        <span>{{ drink.tallPrice }}</span>
+        <span>{{ drink.grandePrice }}</span>
+      </div>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>
