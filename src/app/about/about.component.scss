@@ -1,0 +1,52 @@
+.main {
+  //background-image: url('src/assets/images/background.jpg');
+  height: var(--main-height);
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.about {
+  display: flex;
+  height: 100%;
+  & > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .image {
+    padding-right: 1vw;
+    justify-content: flex-end;
+    img {
+      width: 30vw;
+      height: 40vh;
+    }
+  }
+
+  .description {
+    padding-left: 1vw;
+    .text {
+      width: 30vw;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+span {
+  &.header-text {
+    color: var(--primary-clr);
+  }
+}
+
+.body-text {
+  line-height: 3vh;
+  text-justify: inter-word;
+  display: flex;
+  justify-content: center;
+}

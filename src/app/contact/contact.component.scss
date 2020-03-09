@@ -1,0 +1,64 @@
+.form {
+  width: 45vw;
+}
+
+.main {
+  padding-top: 6vh;
+}
+
+button {
+  height: 3vw;
+  width: 20vh;
+  text-transform: uppercase;
+
+  border: var(--primary-clr) 0.1vh solid;
+  color: var(--primary-clr);
+
+  &:hover {
+    color: #ffffff;
+    background-color: var(--primary-clr);
+  }
+}
+
+.contact-strip {
+  width: 100%;
+  height: 15vh;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-clr);
+}
+
+.contact-option {
+  width: 15%;
+  height: 10vh;
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3vw;
+}
+
+.contact-image {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 4vh;
+    height: 4vh;
+  }
+}
+
+.contact-text {
+  color: var(--flat-white);
+  font-size: 1.5vh;
+  font-family: bodyFont;
+}
+
+.contact-title {
+  font-size: 2.5vh;
+  font-family: titleFont;
+}

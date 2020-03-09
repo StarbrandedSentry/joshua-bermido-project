@@ -1,36 +1,13 @@
 <div class="main">
   <div class="main-top">
-    <img
+    <!--<img
       [src]="[carouselSrc]"
       alt="best-seller picture"
       class="carousel"
       [@opacityChange]="fadeOut ? 'fadeOut' : 'fadeIn'"
-    />
+    />-->
     <div class="logo">Masissneun</div>
-    <!-- <div class="best">
-      <div class="subheader">Check our best sellers!</div>
-      <img [src]="[carouselSrc]" alt="best-seller picture" />
-      <div class="carousel-buttons">
-        <button
-          (click)="changeCarouselImage('./assets/images/showcase-1.jpg')"
-        ></button>
-        <button
-          (click)="changeCarouselImage('./assets/images/showcase-2.jpg')"
-        ></button>
-        <button
-          (click)="changeCarouselImage('./assets/images/showcase-3.jpg')"
-        ></button>
-        <button
-          (click)="changeCarouselImage('./assets/images/showcase-4.jpg')"
-        ></button>
-        <button
-          (click)="changeCarouselImage('./assets/images/showcase-5.jpg')"
-        ></button>
-        <button
-          (click)="changeCarouselImage('./assets/images/showcase-6.jpg')"
-        ></button>
-      </div>
-    </div> -->
+
     <div class="buttons">
       <button class="outlined" [routerLink]="['/menus']">See Menu</button>
       <button class="outlined" [routerLink]="['/contact']">
@@ -38,7 +15,7 @@
       </button>
       <!--<button class="outlined" [routerLink]="['/contact']">Reservations</button>-->
     </div>
-    <div class="carousel-buttons">
+    <!--<div class="carousel-buttons">
       <button
         [class.carousel-selected]="carouselImage == 1"
         (click)="changeCarouselImage('./assets/images/showcase-1.jpg', 1)"
@@ -63,28 +40,44 @@
         [class.carousel-selected]="carouselImage == 6"
         (click)="changeCarouselImage('./assets/images/showcase-6.jpg', 6)"
       ></button>
-    </div>
+    </div>-->
   </div>
   <div class="main-bottom">
-    <div class="image">
-      <img src="./assets/images/background.jpg" />
+     <div class="best">
+     <div class="subheader">Check our best sellers</div>
+      <div class="caption">yummy!</div>
+     <img
+      [src]="[carouselSrc]"
+      alt="best-seller picture"
+      class="carousel"
+      [@opacityChange]="fadeOut ? 'fadeOut' : 'fadeIn'"
+    />
+     <div class="carousel-buttons">
+      <button
+        class="{{carouselImage == 1 ? 'carousel-selected' : 'carousel-unselected'}}"
+        (click)="changeCarouselImage('./assets/images/showcase-1.jpg', 1)"
+      ></button>
+      <button
+        class="{{carouselImage == 2 ? 'carousel-selected' : 'carousel-unselected'}}"
+        (click)="changeCarouselImage('./assets/images/showcase-2.jpg', 2)"
+      ></button>
+      <button
+        class="{{carouselImage == 3 ? 'carousel-selected' : 'carousel-unselected'}}"
+        (click)="changeCarouselImage('./assets/images/showcase-3.jpg', 3)"
+      ></button>
+      <button
+        class="{{carouselImage == 4 ? 'carousel-selected' : 'carousel-unselected'}}"
+        (click)="changeCarouselImage('./assets/images/showcase-4.jpg', 4)"
+      ></button>
+      <button
+        class="{{carouselImage == 5 ? 'carousel-selected' : 'carousel-unselected'}}"
+        (click)="changeCarouselImage('./assets/images/showcase-5.jpg', 5)"
+      ></button>
+      <button
+        class="{{carouselImage == 6 ? 'carousel-selected' : 'carousel-unselected'}}"
+        (click)="changeCarouselImage('./assets/images/showcase-6.jpg', 6)"
+      ></button>
     </div>
-    <div class="description">
-      <div class="text">
-        <div class="subheader">
-          Welcome to <span class="header-text">Masissneun</span>
-        </div>
-        <div class="caption">little story</div>
-        <p class="body-text" align="center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu.
-          Nullam facilisis, eros in eleifend luctus, odio ante sodales augue,
-          eget lacinia lectus erat et sem. Sed semper orci sit amet porta
-          placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a
-          pellentesque tellus pretium a. Nulla placerat elit in justo
-          vestibulum, et maximus sem pulvinar.
-        </p>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
+<app-footer></app-footer>

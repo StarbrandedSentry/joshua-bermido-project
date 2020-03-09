@@ -1,6 +1,10 @@
 :root {
   --main-height: 87vh;
   --primary-clr: #d8192d;
+  --light-black: #4d4d4d;
+  --border-clr: #c7c1c1;
+  --flat-white: #ecf0f1;
+  --flat-black: #262626;
 }
 
 @font-face {
@@ -81,6 +85,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.75vh;
+  font-family: titleFont;
 
   &.outlined {
     background: none;
@@ -168,8 +174,43 @@ button {
   }
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 0;
+  align-items: center;
+}
+
 router-outlet ~ * {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+  font-family: bodyFont;
+  background: none;
+  margin-bottom: 2vh;
+  border: var(--border-clr) 0.1vh solid;
+  font-size: 1.75vh;
+  height: fit-content;
+  padding: 1vh 0.5vw;
+  resize: vertical;
+  min-height: 5vh;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  font-family: bodyFont;
+  background: none;
+  margin-bottom: 2vh;
+  &[type='text'] {
+    border: var(--border-clr) 0.1vh solid;
+    font-size: 1.75vh;
+    height: fit-content;
+    padding: 1vh 0.5vw;
+  }
 }

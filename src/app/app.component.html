@@ -1,19 +1,15 @@
 <nav>
-  <div class="row">
-    <div class="logo no-select" [routerLink]="['/welcome']">Masissneun</div>
-  </div>
-  <div class="row">
-    <div class="links">
-      <a [routerLink]="['/welcome']" [routerLinkActive]="['active-link']"
-        >Home</a
-      >
-      <a [routerLink]="['/menus']" [routerLinkActive]="['active-link']"
-        >Menus</a
-      >
-      <a [routerLink]="['/contact']" [routerLinkActive]="['active-link']"
-        >Contact</a
-      >
-    </div>
+  <div class="logo no-select" [routerLink]="['/welcome']">Masissneun</div>
+  <div class="links">
+    <a [routerLink]="['/welcome']" [routerLinkActive]="['active-link']">Home</a>
+    <a [routerLink]="['/menus']" [routerLinkActive]="['active-link']">Menu</a>
+    <a [routerLink]="['/reservation']" [routerLinkActive]="['active-link']"
+      >Reservation</a
+    >
+    <a [routerLink]="['/about']" [routerLinkActive]="['active-link']">About</a>
+    <a [routerLink]="['/contact']" [routerLinkActive]="['active-link']"
+      >Contact</a
+    >
   </div>
 </nav>
 <div class="body" [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
