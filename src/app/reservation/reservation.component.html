@@ -1,2 +1,38 @@
-<div class="main"></div>
+<div class="main">
+  <div class="subheader">reservation</div>
+  <div class="caption">reserve your meal now!</div>
+  <div class="form">
+    <input type="text" placeholder="Your Name" />
+    <input type="text" placeholder="Email" />
+    <input type="text" placeholder="Contact Number" />
+    <input
+      type="text"
+      placeholder="Date"
+      #date
+      onfocus="(this.type='date')"
+      (focusout)="date.type = 'text'"
+    />
+    <input
+      type="text"
+      placeholder="From what time"
+      #from
+      onfocus="(this.type='time')"
+      (focusout)="from.type = 'text'"
+    />
+    <input
+      type="text"
+      placeholder="Until what time"
+      #to
+      onfocus="(this.type='time')"
+      (focusout)="to.type = 'text'"
+    />
+    <textarea
+      id="w3mission"
+      rows="4"
+      cols="50"
+      placeholder="Your Message"
+    ></textarea>
+    <button class="outlined">send message</button>
+  </div>
+</div>
 <app-footer></app-footer>

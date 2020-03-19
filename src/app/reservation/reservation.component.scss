@@ -1,0 +1,33 @@
+.form {
+  width: 45vw;
+}
+
+.main {
+  padding-top: 6vh;
+}
+
+.labelled-input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  .label {
+    font-family: bodyFont;
+    color: black;
+    margin-right: 2vw;
+  }
+}
+
+button {
+  height: 3vw;
+  width: 20vh;
+  text-transform: uppercase;
+
+  border: var(--primary-clr) 0.1vh solid;
+  color: var(--primary-clr);
+
+  &:hover {
+    color: #ffffff;
+    background-color: var(--primary-clr);
+  }
+}

@@ -207,7 +207,9 @@ input {
   font-family: bodyFont;
   background: none;
   margin-bottom: 2vh;
-  &[type='text'] {
+  &[type='text'],
+  &[type='date'],
+  &[type='time'] {
     border: var(--border-clr) 0.1vh solid;
     font-size: 1.75vh;
     height: fit-content;

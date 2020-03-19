@@ -9,10 +9,10 @@
 .top-footer {
   background-color: #ea6448;
   color: var(--flat-white);
-  height: 26vh;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .bottom-footer {
