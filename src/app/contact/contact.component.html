@@ -11,9 +11,15 @@
       placeholder="Your Message"
       [(ngModel)]="message"
     ></textarea>
-    <div class="success" *ngIf="success">
+    <div class="pop-message success" *ngIf="success">
       Message sent!
-      <div class="close-success" (click)="onCloseClick()">
+      <div class="close" (click)="onCloseClick()">
+        close
+      </div>
+    </div>
+    <div class="pop-message error" *ngIf="error">
+      Complete the form, please!
+      <div class="close" (click)="onCloseClick()">
         close
       </div>
     </div>

@@ -2,15 +2,16 @@
   <div class="subheader">reservation</div>
   <div class="caption">reserve your meal now!</div>
   <div class="form">
-    <input type="text" placeholder="Your Name" />
-    <input type="text" placeholder="Email" />
-    <input type="text" placeholder="Contact Number" />
+    <input type="text" placeholder="Your Name" [(ngModel)]="name" />
+    <input type="text" placeholder="Email" [(ngModel)]="email" />
+    <input type="text" placeholder="Contact Number" [(ngModel)]="contact" />
     <input
       type="text"
       placeholder="Date"
       #date
       onfocus="(this.type='date')"
       (focusout)="date.type = 'text'"
+      [(ngModel)]="resDate"
     />
     <input
       type="text"
@@ -18,6 +19,7 @@
       #from
       onfocus="(this.type='time')"
       (focusout)="from.type = 'text'"
+      [(ngModel)]="fromTime"
     />
     <input
       type="text"
@@ -25,14 +27,28 @@
       #to
       onfocus="(this.type='time')"
       (focusout)="to.type = 'text'"
+      [(ngModel)]="toTime"
     />
     <textarea
       id="w3mission"
       rows="4"
       cols="50"
       placeholder="Your Message"
+      [(ngModel)]="message"
     ></textarea>
-    <button class="outlined">send message</button>
+    <div class="pop-message success" *ngIf="success">
+      Message sent!
+      <div class="close" (click)="onCloseClick()">
+        close
+      </div>
+    </div>
+    <div class="pop-message error" *ngIf="error">
+      Complete the form, please!
+      <div class="close" (click)="onCloseClick()">
+        close
+      </div>
+    </div>
+    <button class="outlined" (click)="onButtonClick()">send message</button>
   </div>
 </div>
 <app-footer></app-footer>

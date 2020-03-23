@@ -10,18 +10,24 @@ export class ContactComponent implements OnInit {
   email: string;
   message: string;
   success = false;
+  error = false;
 
   constructor() {}
 
   ngOnInit() {}
 
   onButtonClick() {
+    if (!this.name || !this.email || !this.message) {
+      this.error = true;
+      return;
+    }
     this.clearText();
     this.success = true;
   }
 
   onCloseClick() {
     this.success = false;
+    this.error = false;
   }
 
   clearText(): void {

@@ -63,19 +63,27 @@ button {
   font-family: titleFont;
 }
 
-.success {
-  background-color: #4caf50;
+.pop-message {
+  color: #ffffff;
+  text-transform: capitalize;
   width: 100%;
   height: 6vh;
   padding: 0 2vw;
   display: flex;
   align-items: center;
-  color: #ffffff;
-  text-transform: capitalize;
-  .close-success {
-    text-transform: uppercase;
-    font-family: titleFont;
-    cursor: pointer;
-    margin-left: auto;
-  }
+}
+
+.success {
+  background-color: #4caf50;
+}
+
+.error {
+  background-color: #f44336;
+}
+
+.close {
+  text-transform: uppercase;
+  font-family: titleFont;
+  cursor: pointer;
+  margin-left: auto;
 }
