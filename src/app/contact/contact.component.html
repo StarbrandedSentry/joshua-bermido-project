@@ -2,17 +2,24 @@
   <div class="subheader">contact us</div>
   <div class="caption">hello, contact us!</div>
   <div class="form">
-    <input type="text" placeholder="Your Name" />
-    <input type="text" placeholder="Your Email" />
+    <input type="text" placeholder="Your Name" [(ngModel)]="name" />
+    <input type="text" placeholder="Your Email" [(ngModel)]="email" />
     <textarea
       id="w3mission"
       rows="4"
       cols="50"
       placeholder="Your Message"
+      [(ngModel)]="message"
     ></textarea>
+    <div class="success" *ngIf="success">
+      Message sent!
+      <div class="close-success" (click)="onCloseClick()">
+        close
+      </div>
+    </div>
   </div>
 
-  <button class="outlined">send message</button>
+  <button class="outlined" (click)="onButtonClick()">send message</button>
   <div class="contact-strip">
     <div class="contact-option">
       <div class="contact-image">
@@ -40,7 +47,9 @@
       </div>
       <div class="contact-body">
         <div class="contact-title">Location</div>
-        <div class="contact-text">105 Jacinto Street Barangay Pitogo Makati City</div>
+        <div class="contact-text">
+          105 Jacinto Street Barangay Pitogo Makati City
+        </div>
       </div>
     </div>
   </div>
